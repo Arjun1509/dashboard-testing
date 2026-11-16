@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --bg-paper: #F4F2EC;
+  --surface: #FFFFFF;
+  --surface-muted: #EBE8DF;
+  --ink: #141513;
+  --ink-2: #4A4B45;
+  --ink-3: #6C6D65;
+  --acid-lime: #B8FF2E;
+  --acid-lime-hover: #A6EE1C;
+  --acid-lime-ink: #141513;
+  --purple: #7B68EE;
+  --purple-deep: #5340C4;
+  --purple-soft: #E9E5FB;
+  --danger: #B91C1C;
+  --danger-bg: #FEE2E2;
+  --warning: #9A3412;
+  --warning-bg: #FFEDD5;
+  --nominal: #166534;
+  --nominal-bg: #DCFCE7;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle architectural pixel grid surface */
+.pixel-grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(20, 21, 19, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 21, 19, 0.055) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pixel-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(184, 255, 46, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(184, 255, 46, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Pixelated rendering for pixel art illustrations */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Sharp editorial shadow for primary focal anchors only */
+.hard-shadow-sm {
+  box-shadow: 3px 3px 0px #141513;
+}
+
+.hard-shadow-md {
+  box-shadow: 5px 5px 0px #141513;
+}
+
+.hard-shadow-lime {
+  box-shadow: 4px 4px 0px #B8FF2E;
+}
+
+/* Focus rings for WCAG AA accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #5340C4;
+  outline-offset: 2px;
+}
+
+/* Custom thin editorial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-muted);
+}
+::-webkit-scrollbar-thumb {
+  background: #8D8E85;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

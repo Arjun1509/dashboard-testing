@@ -1,0 +1,6 @@
+{
+  "name": "SwapSched — Intelligent EV Charging & Battery Swap Platform",
+  "description": "EV fleet energy-management and battery-swapping platform featuring AUPA priority scheduling, MILP/FCFS/SJF/EDF benchmarking, energy demand prediction, and OptiSwap dataset inspection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
